@@ -1,0 +1,78 @@
+-- Create Car table
+CREATE TABLE Car (
+    car_id INT PRIMARY KEY AUTO_INCREMENT,
+    brand VARCHAR(255),
+    model VARCHAR(255),
+    year INT,
+    mileage INT,
+    availability BOOLEAN,
+    is_deleted BOOLEAN,
+    administrator_id INT
+);
+
+-- Create Customer table
+CREATE TABLE Customer (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) UNIQUE,
+    password VARCHAR(255),
+    first_name VARCHAR(255),
+    last_name VARCHAR(255)
+);
+
+-- Create Reservation table
+CREATE TABLE Reservation (
+    reservation_id INT PRIMARY KEY AUTO_INCREMENT,
+    car_id INT,
+    customer_id INT,
+    rental_start_date DATE,
+    rental_end_date DATE,
+    FOREIGN KEY (car_id) REFERENCES Car(car_id),
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
+
+-- Create Transaction table
+CREATE TABLE Transaction (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    reservation_id INT UNIQUE,
+    transaction_date DATE,
+    amount DOUBLE,
+);
+
+
+-- Insert sample cars
+INSERT INTO Car (brand, model, year, mileage, availability) VALUES
+    ('Toyota', 'Camry', 2022, 5000, true),
+    ('Honda', 'Accord', 2021, 8000, true),
+    ('Ford', 'Mustang', 2023, 3000, true);
+
+-- Insert sample customers
+INSERT INTO Customer (username, password, first_name, last_name) VALUES
+    ('customer1', 'password1', 'John', 'Doe'),
+    ('customer2', 'password2', 'Jane', 'Smith');
+
+-- Insert sample reservations
+INSERT INTO Reservation (car_id, customer_id) VALUES
+    (1, 1),
+    (2, 2);
+
+
+-- Select all cars
+SELECT * FROM Car;
+
+-- Select all customers
+SELECT * FROM Customer;
+
+-- Select all reservations
+SELECT * FROM Reservation;
+
+-- Select all transactions
+SELECT * FROM Transaction; 
+
+-- Select available cars
+SELECT * FROM Car WHERE availability = true;
+
+-- Select reserved cars for a specific customer
+SELECT Car.* FROM Car
+JOIN Reservation ON Car.car_id = Reservation.car_id
+WHERE Reservation.customer_id = 1;
+
