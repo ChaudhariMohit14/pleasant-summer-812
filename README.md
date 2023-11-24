@@ -24,17 +24,17 @@ RentNRide is a simple car rental system that allows administrators to manage the
 
 ### Installation
 
-#### Clone the Repository:
+#### 1. Clone the Repository:
 - git clone https://github.com/ChaudhariMohit14/pleasant-summer-812.git
 
-#### Import the Project:
+#### 2. Import the Project:
 - Open the project in your preferred Java IDE.
 
-#### Set Up MySQL Database:
+#### 3. Set Up MySQL Database:
 - Create a new database named rentnride.
 - Update the database connection details in the persistence.xml file.
 
-#### Run the Application.
+#### 4. Run the Application.
 
 ## Tech Stack
 Java, MySQL, Hibernate, Console-based interface
