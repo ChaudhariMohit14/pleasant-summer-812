@@ -25,7 +25,7 @@ RentNRide is a simple car rental system that allows administrators to manage the
 ### Installation
 
 #### Clone the Repository:
-git clone https://github.com/ChaudhariMohit14/pleasant-summer-812.git
+- git clone https://github.com/ChaudhariMohit14/pleasant-summer-812.git
 
 #### Import the Project:
 - Open the project in your preferred Java IDE.
