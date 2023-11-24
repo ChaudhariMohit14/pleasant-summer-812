@@ -1,8 +1,6 @@
 # RentNRide Application
 RentNRide is a simple car rental system that allows administrators to manage the car inventory and customers to search for available cars, view details, make reservations, and manage their reservations.
 
-![RentNRide](https://github.com/ChaudhariMohit14/pleasant-summer-812/assets/121329803/756e2195-f638-4eed-bb0a-d8f623a15d78)
-
 ## Features
 
 ### Administrator Functionalities:
