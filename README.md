@@ -16,6 +16,11 @@ RentNRide is a simple car rental system that allows administrators to manage the
 - Make reservations.
 - View and manage reservations.
 
+## ER Diagram
+![RentNRideERDiagram](https://github.com/ChaudhariMohit14/pleasant-summer-812/assets/121329803/335870e9-1fa2-46cd-9458-ea66fd91be95)
+
+
+
 ## Getting Started
 
 ### Prerequisites
